@@ -20,6 +20,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/shop",
+        loader:  ()=> fetch('fakeData/products.json'),
         element:<Shop/> ,
       },
       {

@@ -1,0 +1,47 @@
+.cart {
+    padding: 10px;
+    position: sticky;
+    top: 91px;
+}
+
+.cart h2{
+    text-align: center;
+    
+}
+
+.btn-group {
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.btn-cart {
+    
+    margin: 6px;
+    padding: 10px;
+    border: 2px solid transparent;
+    box-shadow: 1px 2px 7px;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.2rem;
+    transition: .4s;
+  
+
+}
+
+.bg-red{
+    background: #FF3030 ;
+}
+
+.bg-orange{
+   background:  #FF9900;
+}
+.btn-cart:hover{
+    background: #fff;
+    border: 2px solid #ddd;
+    color: black;
+}
+.icon{
+    margin-left: 10px;
+}

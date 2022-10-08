@@ -1,10 +1,21 @@
 import React from 'react';
+import './shop.css'
 
 const Shop = () => {
     return (
-        <div>
-            <h2>this is shop page</h2>
+        <div className="shop">
+        <div className="products-container">
+          <div className="products">
+  
+            
+         
+          </div>
         </div>
+        <div className="cart-container">
+
+  
+        </div>
+      </div>
     );
 };
 

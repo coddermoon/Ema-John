@@ -1,0 +1,40 @@
+.shop{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    
+    margin: auto;
+}
+
+.cart-container {
+    background: #FF99004D;
+  
+}
+.products-container{
+width: 90%;
+margin: auto;
+}
+.products-container h3{
+    text-align: center;
+}
+
+.products{
+    display: grid;
+    grid-template-columns: repeat(3 ,1fr);
+    gap: 10px;
+    margin: 20px 0 ;
+}
+
+@media (max-width:992px) {
+    .products{
+       
+        grid-template-columns:1fr 1fr;
+       
+    }  
+}
+@media (max-width:768px) {
+    .products{
+       
+        grid-template-columns: 1fr;
+       
+    }  
+}

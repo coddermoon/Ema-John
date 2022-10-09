@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import './Cart.css'
 
-const Cart = ({cart}) => {
+const Cart = ({cart,deleteCart}) => {
   let price = 0;
   let shipping = 0;
   let quantity = 0
@@ -34,7 +34,7 @@ const Cart = ({cart}) => {
         </div>
         <div className="btn-group">
           <button className='btn-cart bg-orange'>Review Order <span className='icon'> <FontAwesomeIcon icon={faArrowRight}/></span> </button>
-          <button className='btn-cart bg-red'>Clear Cart <span className='icon'> <FontAwesomeIcon icon={faTrash}/></span> </button>
+          <button onClick={deleteCart} className='btn-cart bg-red'>Clear Cart <span className='icon'> <FontAwesomeIcon icon={faTrash}/></span> </button>
         </div>
         </div>
       </div>

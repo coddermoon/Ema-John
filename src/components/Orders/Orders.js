@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { useLoaderData } from 'react-router-dom';
-import { removeFromDb } from '../../assets/utilities/fakedb';
+import { Link, useLoaderData } from 'react-router-dom';
+import { deleteShoppingCart, removeFromDb } from '../../assets/utilities/fakedb';
 import Cart from '../Cart/Cart';
 import ReviewItems from '../ReviewItems/ReviewItems';
 
@@ -17,6 +17,11 @@ const Orders = () => {
     removeFromDb(id)
   }
 
+  const deleteCart=()=>{
+    setCart([ ])
+    deleteShoppingCart()
+  }
+
     return (
         <div className='orders'>
            <div className="left">
@@ -27,10 +32,21 @@ const Orders = () => {
             removeItem={removeItem}
             />)
            }
+
+{/* make A conditional rendering */}
+
+{
+  cart.length ===0 && <div style={{textAlign:'center'}}>
+    <h2 >Your Cart is empty </h2>
+    <h3>Go to <Link to='/shop'>Shop</Link>To Shoping Now</h3>
+  </div>
+}
+
            </div>
            <div className="right">
            <Cart
            cart={cart}
+           deleteCart={deleteCart}
            />
            </div>
         </div>

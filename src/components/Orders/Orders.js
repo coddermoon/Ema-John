@@ -8,14 +8,19 @@ import './order.css'
 const Orders = () => {
   const {initialCart}  = useLoaderData()
   const [cart,setCart]= useState(initialCart)
-  console.log(cart)
+ 
+  const removeItem =(removedProduct)=>{
+    console.log(removedProduct)
+  }
+
     return (
         <div className='orders'>
            <div className="left">
            {
             cart.map(reviewPd=><ReviewItems
             review={reviewPd}
-            
+            key={reviewPd.id}
+            removeItem={removeItem}
             />)
            }
            </div>

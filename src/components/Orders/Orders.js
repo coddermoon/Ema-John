@@ -1,9 +1,16 @@
 import React from 'react';
 
+import './order.css'
+
 const Orders = () => {
     return (
-        <div>
-            <h2>this is order pages</h2>
+        <div className='orders'>
+           <div className="left">
+            <h1>this is products</h1>
+           </div>
+           <div className="right">
+           <h2>this is a Cart</h2>
+           </div>
         </div>
     );
 };

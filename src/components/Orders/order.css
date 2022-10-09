@@ -1,0 +1,6 @@
+.orders{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    max-width: 1240px;
+    margin: auto;
+}

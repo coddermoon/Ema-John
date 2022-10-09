@@ -7,6 +7,19 @@ export const addLoaders=async ()=>{
 
     // get cart from localStorage
 const savedCart= getStoredCart()
-console.log(savedCart)
-    return {products}
+const initialCart=[] 
+for (const id in savedCart){
+ 
+const addedProduct= products.find(product=>product.id===id)
+if (addedProduct) {
+    const quantity = savedCart[id];
+            addedProduct.quantity = quantity;
+
+    initialCart.push(addedProduct)
+}
+
+}
+
+console.log( initialCart)
+    return {products,initialCart}
 }

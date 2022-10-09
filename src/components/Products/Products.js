@@ -4,7 +4,7 @@ import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import "./product.css";
 import StarRatings from "react-star-ratings";
 
-const Products = ({ product }) => {
+const Products = ({ product,handleAddToCart }) => {
   const { img,name,price,seller ,ratings} = product;
 
   return (
@@ -15,7 +15,7 @@ const Products = ({ product }) => {
         <h4>price :{price}</h4>
         <p>Manufacturer : {seller}</p>
 
-        <p>
+        <div>
           rating :
           <StarRatings
             className="rate"
@@ -25,14 +25,14 @@ const Products = ({ product }) => {
             starSpacing="5px"
             name="rating"
           />
-        </p>
+        </div>
       </div>
-      <button className="btn">
-        Add To Cart{" "}
+      <button onClick={()=>handleAddToCart(product)} className="btn">
+        Add To Cart
         <FontAwesomeIcon
           className="icon"
           icon={faCartShopping}
-        ></FontAwesomeIcon>{" "}
+        ></FontAwesomeIcon>
       </button>
     </div>
   );

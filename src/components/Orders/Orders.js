@@ -8,10 +8,16 @@ import './order.css'
 const Orders = () => {
   const {initialCart}  = useLoaderData()
   const [cart,setCart]= useState(initialCart)
+  console.log(cart)
     return (
         <div className='orders'>
            <div className="left">
-           <ReviewItems/>
+           {
+            cart.map(reviewPd=><ReviewItems
+            review={reviewPd}
+            
+            />)
+           }
            </div>
            <div className="right">
            <Cart

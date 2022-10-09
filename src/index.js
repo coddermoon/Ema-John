@@ -31,7 +31,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/manage",
-        element:<Orders/> ,
+        element:<h2>this is mannage page</h2> ,
       },
     ]
   },

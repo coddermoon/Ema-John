@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
-import { getStoredCart } from '../../assets/utilities/fakedb';
+import { addToDb, getStoredCart } from '../../assets/utilities/fakedb';
 import Cart from '../Cart/Cart';
 import Products from '../Products/Products';
 
@@ -46,6 +46,7 @@ const Shop = () => {
 
     }
     setCart(newCart)
+    addToDb(selectedProduct.id)
   }
 
 

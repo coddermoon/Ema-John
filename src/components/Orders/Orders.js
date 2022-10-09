@@ -1,15 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useLoaderData } from 'react-router-dom';
+import Cart from '../Cart/Cart';
+import ReviewItems from '../ReviewItems/ReviewItems';
 
 import './order.css'
 
 const Orders = () => {
+  const {initialCart}  = useLoaderData()
+  const [cart,setCart]= useState(initialCart)
     return (
         <div className='orders'>
            <div className="left">
-            <h1>this is products</h1>
+           <ReviewItems/>
            </div>
            <div className="right">
-           <h2>this is a Cart</h2>
+           <Cart
+           cart={cart}
+           />
            </div>
         </div>
     );

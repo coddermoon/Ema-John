@@ -5,6 +5,7 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { router } from './assets/utilities/router';
+import UserContext from './contexts/UserContext';
 
 
 const route = createBrowserRouter(router);
@@ -13,7 +14,11 @@ const route = createBrowserRouter(router);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={route} />
+   <UserContext>
+   <RouterProvider router={route} />
+   </UserContext>
+  
+  
   </React.StrictMode>
 );
 

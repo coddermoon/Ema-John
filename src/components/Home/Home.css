@@ -1,0 +1,9 @@
+.home{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    height: 100vh;
+}
+.hero-image img{
+    width: auto;
+    height: 70%;
+}

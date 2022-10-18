@@ -1,9 +1,14 @@
 import React from 'react';
+import './Home.css'
+import img from '../../assets/images/hero.png'
 
 const Home = () => {
     return (
-        <div>
-            <h2>This is main Homepage</h2>
+        <div className='container home'>
+           <div className="hero-content"></div>
+           <div className="hero-image">
+            <img src={img} alt="" />
+           </div>
         </div>
     );
 };

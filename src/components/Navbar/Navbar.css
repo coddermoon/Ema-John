@@ -28,4 +28,6 @@
     align-items: center;
     height: 80px;
 }
-
+.logo img{
+    height: 90%;
+}

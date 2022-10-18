@@ -17,6 +17,7 @@ const Navbar = () => {
              <Link to='/orders'>review</Link>
              <Link to='/manage'>Manage Enventory</Link>
              <Link to='/login'>Login</Link>
+             <Link to='/register'>Sign Up</Link>
          </div>
          </div>
          </div> 

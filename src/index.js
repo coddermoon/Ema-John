@@ -4,45 +4,16 @@ import './index.css';
 
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Home from './components/Home/Home';
-import Shop from './components/Shop/Shop';
-import App from './App';
-import Orders from './components/Orders/Orders';
-import { addLoaders } from './loaders/addLoaders';
+import { router } from './assets/utilities/router';
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element:<App/> ,
-    children:[
-      {
-        path: "/",
-        element:<Home/> ,
-      },
-      {
-        path: "/shop",
-        loader:  ()=> fetch('fakeData/products.json'),
-        element:<Shop/> ,
-      },
-      {
-        path: "/orders",
-        loader:addLoaders,
-        element:<Orders/> ,
-      },
-      {
-        path: "/manage",
-        element:<h2>this is mannage page</h2> ,
-      },
-    ]
-  },
- 
-]);
+
+const route = createBrowserRouter(router);
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <RouterProvider router={route} />
   </React.StrictMode>
 );
 
